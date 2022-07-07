@@ -1,3 +1,8 @@
+:root {
+    --clr-bg: rgb(20, 20, 20);
+    --clr-txt: rgb(240, 240, 240);
+}
+
 html {
     box-sizing: border-box;
 }
@@ -17,7 +22,16 @@ body {
 }
 
 body * {
-    /* outline: 1px solid black !important; */
+    outline: 1px solid red !important;
+    background-color: var(--clr-bg);
+    color: var(--clr-txt);
+}
+
+header,
+footer {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .content {
@@ -27,10 +41,25 @@ body * {
     flex-direction: column;
 }
 
-header,
-footer {
-    font-size: x-large;
-    text-align: center;
+.tab-bar {
+    display: flex;
+    justify-content: center;
+    gap:0.5rem;
+}
+
+.tab-button {
+    font-size: large;
+    font-weight: bold;
+    width: 15%;
+    min-width: fit-content;
+    color: var(--clr-bg);
+    background-color: var(--clr-txt);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .scroll {
@@ -41,12 +70,19 @@ footer {
 }
 
 main {
-    background-image: url(../img/placeholder.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    padding: 1rem;
     flex-grow: 1;
+}
+
+.tab-content {
+    height: 100%;
+    padding: 1rem;
+}
+
+.about {
+    background-image: url(../img/placeholder.jpg);
+    /* if i cared what it looked like, i would use this */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 
     display: flex;
     flex-direction: column;
@@ -55,8 +91,12 @@ main {
     gap: 2rem;
 }
 
-main p {
+.about p {
     min-width: 25ch;
     max-width: 75ch;
     font-size: large;
+}
+
+.hidden {
+    display: none;
 }

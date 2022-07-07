@@ -9,23 +9,67 @@
     <title>Restaurant Page</title>
 </head>
 
+<!-- TODO: this file is prototype throwaway crap; mostly to get styles worked out -->
+
 <body>
 
     <div id="content" class="content">
 
-        <header>Restaurant Page</header>
+        <header>
+            <h1>Restaurant Page</h1>
+            <nav class="tab-bar">
+                <button class="tab-button" type="button" onclick="showTab(this.innerText);">About</button>
+                <button class="tab-button" type="button" onclick="showTab(this.innerText);">Menu</button>
+                <button class="tab-button" type="button" onclick="showTab(this.innerText);">Contact</button>
+            </nav>
+        </header>
 
         <div class="scroll">
+
             <main>
-                <h1>Words about stuff</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda at debitis nobis tempore, ducimus ratione nemo obcaecati culpa quo, earum dolore voluptate tempora quae consequuntur alias amet magni doloribus illum harum inventore iure! Illum, inventore nam saepe dignissimos facilis hic vitae, laboriosam minima, minus iure id culpa excepturi impedit possimus iusto assumenda veniam reprehenderit perferendis rem beatae eius odio? Placeat sapiente aspernatur tempora? Deserunt dignissimos, minus iure quae dolorum expedita eligendi perspiciatis ipsam natus. Nemo iure facere id. Voluptas recusandae non magnam, eius impedit pariatur! Nemo consequuntur alias facilis dolorem beatae, atque impedit molestias nobis incidunt, aliquid officiis tenetur ea, repellendus aut. Cumque commodi aliquid, nostrum odit facere autem at consequuntur. Cupiditate iusto dolorum temporibus quam quaerat perspiciatis, voluptate eos esse dolor placeat assumenda.</p>
-                
+                <div class="tab-content about">
+                    <h2>Words about stuff</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda at debitis nobis
+                        tempore, ducimus ratione nemo obcaecati culpa quo, earum dolore voluptate tempora quae
+                        consequuntur
+                        alias amet magni doloribus illum harum inventore iure! Illum, inventore nam saepe dignissimos
+                        facilis hic vitae, laboriosam minima, minus iure id culpa excepturi impedit possimus iusto
+                        assumenda
+                        veniam reprehenderit perferendis rem beatae eius odio? Placeat sapiente aspernatur tempora?
+                        Deserunt
+                        dignissimos, minus iure quae dolorum expedita eligendi perspiciatis ipsam natus. Nemo iure
+                        facere
+                        id. Voluptas recusandae non magnam, eius impedit pariatur! Nemo consequuntur alias facilis
+                        dolorem
+                        beatae, atque impedit molestias nobis incidunt, aliquid officiis tenetur ea, repellendus aut.
+                        Cumque
+                        commodi aliquid, nostrum odit facere autem at consequuntur. Cupiditate iusto dolorum temporibus
+                        quam
+                        quaerat perspiciatis, voluptate eos esse dolor placeat assumenda.</p>
+                </div>
+                <div class="tab-content menu">menu</div>
+                <div class="tab-content contact">contact</div>
             </main>
 
             <footer>foot</footer>
         </div>
 
     </div>
+
+    <script>
+        const divs = document.querySelectorAll('.tab-content');
+
+        showTab('about');
+
+        function showTab(value) {
+            hideAllTabs();
+            const div = document.querySelector(`.${value.toLowerCase()}`);
+            div.classList.toggle('hidden', false);
+        }
+        function hideAllTabs() {
+            divs.forEach(div => div.classList.toggle('hidden', true));
+        }
+</script>
 
 </body>
 
