@@ -22,7 +22,7 @@ body {
 }
 
 body * {
-    outline: 1px solid red !important;
+    /* outline: 1px solid red !important; */
     background-color: var(--clr-bg);
     color: var(--clr-txt);
 }
@@ -76,6 +76,11 @@ main {
 .tab-content {
     height: 100%;
     padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about {
@@ -84,10 +89,6 @@ main {
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
 }
 
@@ -97,6 +98,19 @@ main {
     font-size: large;
 }
 
+.menu {
+    background-color: aqua;
+    color: black;
+    font-size: xx-large;
+}
+
+.contact {
+    background-color: burlywood;
+    color: black;
+    font-size: xx-large;
+}
+
+/* position is important, has to be after all tab-content */
 .hidden {
     display: none;
 }
