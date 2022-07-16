@@ -23,6 +23,9 @@ body {
 
 body * {
     /* outline: 1px solid red !important; */
+}
+
+body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
 }
@@ -42,6 +45,7 @@ footer {
 }
 
 .tab-bar {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap:0.5rem;
@@ -88,6 +92,7 @@ main {
     /* if i cared what it looked like, i would use this */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
+    color: var(--clr-bg);
 
     gap: 2rem;
 }

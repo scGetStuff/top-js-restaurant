@@ -1,9 +1,21 @@
 'use strict';
 
-function component() {
-    const element = document.createElement('div');
-    element.innerText = 'test';
-    return element;
+import { loadLayout } from './modules/layout.js';
+
+const tabContent = loadLayout();
+
+const buttons = document.querySelectorAll('.tab-button');
+buttons.forEach(button => {
+    button.addEventListener('click', showTabEvent);
+});
+
+function showTabEvent(e) {
+    showTab(e.target.innerText)
 }
 
-document.body.appendChild(component());
+function showTab(value) {
+    tabContent.innerText = value;
+}
+
+
+
