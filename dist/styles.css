@@ -92,8 +92,8 @@ main {
     /* if i cared what it looked like, i would use this */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-    color: var(--clr-bg);
 
+    color: var(--clr-bg);
     gap: 2rem;
 }
 
@@ -116,6 +116,7 @@ main {
 }
 
 /* position is important, has to be after all tab-content */
+/* TODO: this is only used in the prototype static page, could be removed */
 .hidden {
     display: none;
 }
