@@ -29,4 +29,13 @@ const tabs = {
     },
 };
 
-export { tabs };
+function createElement(tag, text = '') {
+    const element = document.createElement(tag);
+
+    if (text !== '')
+        element.innerText = text;
+
+    return element;
+}
+
+export { tabs, createElement };
