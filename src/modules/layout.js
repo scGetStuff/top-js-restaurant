@@ -1,5 +1,7 @@
 'use strict';
 
+import { tabs } from './globalStuff.js';
+
 // TODO: initial test code
 function XloadLayout() {
     const element = document.createElement('div');
@@ -48,9 +50,9 @@ function createNav() {
     const nav = createElement('nav');
 
     nav.classList.add('tab-bar');
-    nav.appendChild(createTabButton('About'));
-    nav.appendChild(createTabButton('Menu'));
-    nav.appendChild(createTabButton('Contact'));
+    Object.keys(tabs).forEach(key => {
+        nav.appendChild(createTabButton(tabs[key].buttonLabel));
+    });
 
     return nav;
 }
