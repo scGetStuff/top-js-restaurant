@@ -1,6 +1,6 @@
 'use strict';
 
-import { tabs } from './globalStuff.js';
+import { tabs, createElement } from './globalStuff.js';
 
 // TODO: initial test code
 function XloadLayout() {
@@ -26,16 +26,6 @@ function loadLayout() {
     scrollContainer.appendChild(createElement('footer', 'footer'));
     main.appendChild(tabContent);
 }
-
-function createElement(tag, text = '') {
-    const element = document.createElement(tag);
-
-    if (text !== '')
-        element.innerText = text;
-
-    return element;
-}
-
 
 function createHeader() {
     const header = createElement('header');
