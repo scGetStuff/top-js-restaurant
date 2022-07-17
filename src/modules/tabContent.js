@@ -5,7 +5,7 @@ function createTabContent(cssClassName) {
     const tabContent = document.createElement('div');
 
     tabContent.classList.add('tab-content');
-    tabContent.classList.add(cssClassName)
+    tabContent.classList.add(cssClassName);
 
     main.innerHTML = '';
     main.appendChild(tabContent);
