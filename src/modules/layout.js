@@ -1,5 +1,6 @@
 'use strict';
 
+// TODO: initial test code
 function XloadLayout() {
     const element = document.createElement('div');
 
@@ -11,6 +12,7 @@ function loadLayout() {
     const content = document.querySelector('#content');
     const scrollContainer = createElement('div');
     const main = createElement('main');
+    // TODO: first pass, can go away once tab content modules are done
     const tabContent = createElement('div', 'test');
 
     content.classList.add('content');
@@ -21,8 +23,6 @@ function loadLayout() {
     scrollContainer.appendChild(main);
     scrollContainer.appendChild(createElement('footer', 'footer'));
     main.appendChild(tabContent);
-
-    return tabContent;
 }
 
 function createElement(tag, text = '') {
